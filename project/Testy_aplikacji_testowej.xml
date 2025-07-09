@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="812d1db6-a0f2-4fb6-bbbf-afd00bf944b5" activeEnvironment="Default" name="Testy aplikacji testowej" resourceRoot="" soapui-version="5.8.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="339ff1b4-e757-4a76-907c-99748a3b2a49" wadlVersion="http://wadl.dev.java.net/2009/02" name="Aplikacja testowa" type="rest" basePath="" definitionUrl="/Users/marcin/Downloads/AplikacjaTestowa.wadl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/marcin/Downloads/AplikacjaTestowa.wadl"><con:part><con:url>file:/Users/marcin/Downloads/AplikacjaTestowa.wadl</con:url><con:content><![CDATA[<application xmlns="http://wadl.dev.java.net/2009/02">
+  <doc xml:lang="en" title="Aplikacja testowa"/>
+  <resources base="">
+    <resource path="statusZadania" id="statusZadania">
+      <doc xml:lang="en" title="statusZadania"/>
+      <param name="kod" default="zadanie_1" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <method name="GET" id="Method statusZadania">
+        <doc xml:lang="en" title="Metoda statusZadania"/>
+        <request/>
+        <response status="200">
+          <representation mediaType=""/>
+          <representation mediaType="text/plain;charset=UTF-8"/>
+        </response>
+        <response status="400 404 500">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+  </resources>
+</application>]]></con:content><con:type>http://wadl.dev.java.net/2009/02</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://MacBook-Air:8089/</con:endpoint></con:endpoints><con:resource name="statusZadania" path="/statusZadania" id="88aa6292-a896-4129-bb96-632c7ba08317"><con:settings/><con:parameters><con:parameter><con:name>kod</con:name><con:value>zadanie_1</con:value><con:style>QUERY</con:style><con:default>zadanie_1</con:default></con:parameter></con:parameters><con:method name="Metoda statusZadania - Method statusZadania" id="5afb4703-bbe1-4839-9cd7-6035e2a54519" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType/><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>text/plain;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400 404 500</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="3c3985ac-4882-4a0f-a576-1d75f5883090" mediaType="application/json"><con:settings/><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="kod" value="zadanie_1" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>kod</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="a8194437-8137-4f05-96a5-badce59123d6" name="Aplikacja testowa"><con:description>TestSuite generated for REST Service [Aplikacja testowa]</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="e4005367-20d0-4d9d-adb7-807a56eeebfc" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="statusZadania" searchProperties="true"><con:description>TestCase generated for REST Resource [statusZadania] located at [/statusZadania]</con:description><con:settings/><con:testStep type="restrequest" name="Odpowiedź" id="a68dcd00-7b1c-457b-afab-766142329560"><con:settings/><con:config service="Aplikacja testowa" resourcePath="/statusZadania" methodName="Metoda statusZadania - Method statusZadania" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Odpowiedź" id="3c3985ac-4882-4a0f-a576-1d75f5883090" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>${#Project#BaseURL}</con:endpoint><con:request/><con:originalUri>http://localhost/statusZadania</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="93c91e6d-80cb-4617-82c5-697daa144f53" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="17f31cbd-2726-4a86-9570-f734db8fe5f7" name="Pierwsza linia"><con:configuration><token>Task summary Generated At</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="870a5d1e-e03c-48c0-9d7d-3394abc0fd05" name="Naglowek"><con:configuration><token>|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="97b5d847-b369-4e3a-b0a6-7fafcbfbe32c" name="Kod zadania"><con:configuration><token>|${#TestCase#kod}</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="db06d8ee-b2df-4d1e-a352-f3b50aaa5033" name="Podsumowanie"><con:configuration><token>Podsumowanie</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="5fca6366-0d23-4f02-b339-35fdd14cc7e1" name="Not Contains"><con:configuration><token>FAILED</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="4021f673-8262-4f3c-9ef9-88e11a54d44d" name="Not Contains 2"><con:configuration><token>Failures</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="49c88307-499f-463f-bcb0-2db31bd6c745" name="Script Assertion"><con:configuration><scriptText>import javax.swing.*
+import java.awt.*
+import com.eviware.soapui.support.UISupport
+
+// Funkcja pomocnicza do logowania szczegółów błędów
+def logujSzczegoly(linie) {
+    if (linie &amp;&amp; linie.size() > 0) {
+        log.error('  Szczegóły:')
+        linie.each { linia -> log.error('      ' + linia) }
+    }
+}
+
+// Funkcja do wyświetlenia okna dialogowego z ograniczeniem rozmiaru (tylko jeśli GUI dostępne)
+def pokazOgraniczonyDialog(message, title, messageType, maxWidthPercent, maxHeightPercent) {
+    if (System.getProperty("soapui.cli") == "true") {
+    log.info("Tryb CLI – pomijam wyświetlanie okna dialogowego.")
+    return
+    }
+
+    try {
+        JTextArea textArea = new JTextArea(message)
+        textArea.setEditable(false)
+        textArea.setLineWrap(false)
+        textArea.setWrapStyleWord(false)
+        textArea.setFont(new Font("Monospaced", Font.PLAIN, 12))
+
+        JScrollPane scrollPane = new JScrollPane(textArea)
+
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize()
+        int maxWidth = (int) (screenSize.width * maxWidthPercent)
+        int maxHeight = (int) (screenSize.height * maxHeightPercent)
+
+        textArea.setSize(new Dimension(maxWidth, Integer.MAX_VALUE))
+        textArea.revalidate()
+        Dimension preferredSize = textArea.getPreferredScrollableViewportSize()
+
+        int finalWidth = Math.min(preferredSize.width + 250, maxWidth)
+        int finalHeight = Math.min(preferredSize.height + 125, maxHeight)
+
+        scrollPane.setPreferredSize(new Dimension(finalWidth, finalHeight))
+        scrollPane.revalidate()
+        scrollPane.repaint()
+
+        JOptionPane optionPane = new JOptionPane(scrollPane, messageType)
+        JDialog dialog = optionPane.createDialog(title)
+        dialog.setResizable(false)
+        dialog.setSize(new Dimension(finalWidth, finalHeight))
+        dialog.revalidate()
+        dialog.repaint()
+        dialog.setVisible(true)
+    } catch (Exception e) {
+        log.error("Błąd podczas wyświetlania okna dialogowego: " + e.message)
+    }
+}
+
+// Przykładowe dane
+def odpowiedz = messageExchange.responseContent ?: ""
+if (odpowiedz.trim().isEmpty()) {
+    log.error(" Odpowiedź serwera jest pusta. Przerywam wykonanie.")
+    testRunner.cancel(" Brak treści w odpowiedzi serwera.")
+    return
+}
+
+def wyklucz = context.expand('${#TestCase#kod}').trim() ?: ""
+
+// Sprawdzenie, czy istnieje linia z kodem
+def linieOdpowiedzi = odpowiedz.split('\n')
+def liniaZKodem = linieOdpowiedzi.find { it.contains("|" + wyklucz) }
+
+if (liniaZKodem == null) {
+    log.error(" Nie znaleziono linii zawierającej kod zadania: " + wyklucz)
+    testRunner.cancel(" Brak linii z kodem zadania: " + wyklucz)
+    return
+}
+
+// Wyodrębnianie linii z różnymi kryteriami
+def liniaZsoon = linieOdpowiedzi.findAll { it.contains('No information yet. Please try again soon!') }
+def linieZFailed = linieOdpowiedzi.findAll { it.contains('FAILED') &amp;&amp; !it.contains(wyklucz) }
+def linieZFailures = linieOdpowiedzi.findAll { it.contains('Failures') }
+def linieZRunNew = linieOdpowiedzi.findAll { it.contains('|RUNNING') || it.contains('|NEW') }
+def linieZFailuresSpecjalne = []
+
+if (linieZFailures.size() > 0) {
+    linieZFailuresSpecjalne = linieOdpowiedzi.findAll {
+        it.contains('#') || it.contains('MAIN:') || it.contains('READER:') ||
+        it.contains('Caused by:') || it.contains('WRITER:')
+    }
+}
+
+// Logika główna
+if (liniaZsoon.size() == 1) {
+    log.warn(" Należy ponowić sprawdzenie statusu zadania " + wyklucz)
+} else if (linieZRunNew.size() > 0) {
+    log.warn(" Nie wszystkie kroki zostały zakończone dla zadania " + wyklucz)
+} else if (linieZFailed.size() > 0) {
+    if (linieZFailed.size() == 1) {
+        log.error(" Wystąpił błąd 'FAILED' dla zadania " + wyklucz + ": ")
+        log.error('      ' + linieZFailed[0])
+    } else {
+        log.error(" Wystąpiły błędy 'FAILED' dla zadania " + wyklucz + ": ")
+        linieZFailed.each { linia -> log.error('      ' + linia) }
+    }
+    logujSzczegoly(linieZFailuresSpecjalne)
+    def message = "Wystąpił błąd 'FAILED' dla zadania " + wyklucz + "\n" + linieZFailed.join('\n') + '\n\nSzczegóły błędów znajdują się w logu dla skryptów.'
+    pokazOgraniczonyDialog(message, "Komunikat", JOptionPane.ERROR_MESSAGE, 0.8, 0.6)
+} else {
+    log.info("    Nie wystąpił błąd 'FAILED' dla zadania " + wyklucz)
+}</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="kod" value="${#TestCase#kod}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>kod</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:setupScript>import com.eviware.soapui.support.UISupport
+
+// Próbujemy pobrać przekazaną wartość z system property
+def kodZCli = System.getProperty("kod")?.trim()
+def kodZTestCase = context.expand('${#TestCase#kod}').trim()
+
+// Jeśli kod został przekazany z CLI – użyj go
+if (kodZCli) {
+    log.info "Tryb CLI – przekazano kod zadania: '${kodZCli}'"
+    testRunner.testCase.setPropertyValue("kod", kodZCli)
+}
+// Jeśli nie, ale już jest ustawiony wcześniej – użyj istniejącego
+else if (kodZTestCase) {
+    log.info "Używam wcześniej ustawionego kodu zadania: '${kodZTestCase}'"
+}
+// W przeciwnym razie uruchom GUI prompt
+else {
+    log.info "Brak kodu z CLI – uruchamiam GUI prompt"
+    def kodZadania = UISupport.prompt(
+        "Podaj kod zadania (np. zadanie_1 lub zadanie_2):",
+        "Wprowadź kod zadania",
+        "zadanie_1"
+    )
+
+    if (!kodZadania?.trim()) {
+        log.warn "  Nie podano kodu zadania – TestCase zatrzymany."
+        testRunner.testCase.setPropertyValue("kod", "")
+        testRunner.cancel("Brak kodu zadania")
+    } else {
+        testRunner.testCase.setPropertyValue("kod", kodZadania.trim())
+    }
+}</con:setupScript><con:tearDownScript>testRunner.testCase.setPropertyValue("kod", null)</con:tearDownScript><con:properties><con:property><con:name>kod</con:name><con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:restMockService id="e526f9c4-924d-4eb1-a31e-e7caf7672c23" port="8089" path="/" host="MacBook-Air" name="Zaślepka aplikacji testowej" docroot=""><con:settings/><con:properties/><con:restMockAction name="/statusZadania" method="GET" resourcePath="/statusZadania" id="b13286f9-c356-4192-bd4c-10c9d030bd0c"><con:settings/><con:defaultResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:dispatchStyle>SCRIPT</con:dispatchStyle><con:dispatchPath>def param = mockRequest.getRequest().getParameter("kod")
+
+if (param == "zadanie_1") {
+    return "Odpowiedź-OK"
+} else if (param == "zadanie_2") {
+    return "Odpowiedź-BŁĄD"
+} else {
+    return "Odpowiedź-BRAK"
+}</con:dispatchPath><con:response name="Odpowiedź-OK" id="61f270c0-3ec3-4880-80f5-b8ca6509abf4" httpResponseStatus="200" mediaType="application/xml"><con:settings/><con:responseContent>user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_1'
+Task summary Generated At: Fri Jun 27 08:22:41 CEST 2025
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|zadanie_1                                             |FINISHED |0 */5 * * * *                 |2025-01-27 12:45:00 |2025-01-27 12:45:01 |2025-01-27 12:45:00 |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+
+
+Podsumowanie
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+| lp|Klasa         |Zawartosc                              |Status   |Start              |Koniec             |   Wierszy|Predkosc|Ostatni dostep     | Wierszy/h|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+|  1|Kopiowanie    |Tabela_1                               |FINISHED |2025-01-27 12:45:00|2025-01-27 12:45:01|      1500|       0|                   |         0|
+|  2|Kopiowanie    |Tabela_2                               |FINISHED |2025-01-27 12:45:00|2025-01-27 12:45:01|      3000|       0|                   |         0|
+|  3|Kopiowanie    |Tabela_3                               |FINISHED |2025-01-27 12:45:00|2025-01-27 12:45:01|      6000|       0|                   |         0|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+</con:responseContent><con:header><con:name>kod</con:name><con:value>zadanie_1</con:value></con:header></con:response><con:response name="Odpowiedź-BŁĄD" id="0ff813fd-b64e-4a34-857c-37acf246cb9e" httpResponseStatus="200" mediaType="application/xml"><con:settings/><con:responseContent>user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_2'
+Task summary Generated At: Fri Jun 27 08:23:44 CEST 2025
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|zadanie_2                                            |FAILED   |0 */5 * * * *                 |2025-06-27 08:20:00 |2025-06-27 08:20:12 |2025-05-21 14:10:00 |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+
+
+Podsumowanie
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+| lp|Klasa         |Zawartosc                              |Status   |Start              |Koniec             |   Wierszy|Predkosc|Ostatni dostep     | Wierszy/h|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+|  1|Zakladanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  2|Zakladanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  3|Zakladanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  4|Weryfikacja   |Tabela_1                               |FINISHED |2025-06-27 08:20:07|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  5|Weryfikacja   |Tabela_2                               |FAILED   |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  6|Weryfikacja   |Tabela_3                               |FINISHED |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  7|Kopiowanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      1500|       0|                   |         0|
+|  8|Kopiowanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:09|2025-06-27 08:20:10|      3000|       0|                   |         0|
+|  9|Kopiowanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      6000|       0|                   |         0|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+
+
+Failures:
+#2 Zakladanie/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#5 Weryfikacja/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#8 Kopiowanie/Tabela_2@zadanie_2
+WRITER: java.lang.RuntimeException: MoveAndCommit call() failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:327)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.insertBatch(WriterMultiPGCopy.java:153)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.processRows(AbstractMultiPGWriter.java:188)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.run(WriterMultiPGCopy.java:130)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.RuntimeException: MoveAndCommit failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:323)
+        ... 4 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "column_6" of relation "column_3" violates not-null constraint
+  Detail: Failing row contains (139197, 2025-06-26 19:32:25.989215, 250086, 254655, 5, null, 2025-06-26 19:32:35.087, 2.16.840.1.113883.3.4424.7.26.1, 7220, 1, 1641191, 274219, 2025-06-27 08:20:09.768738, 2025-06-27 08:20:09.768738, SYS_ZEWN, null).
+  Where: SQL statement "INSERT INTO schema_name.tabela_2(column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13) SELECT column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13 FROM temp_table_name ON CONFLICT(column_1) DO UPDATE SET column_6  = EXCLUDED.column_6, column_3  = EXCLUDED.column_3, column_4  = EXCLUDED.column_4, column_12 = EXCLUDED.column_12, column_11 = EXCLUDED.column_11, column_13 = EXCLUDED.column_13, column_9  = EXCLUDED.column_9, column_10 = EXCLUDED.column_10, column_5  = EXCLUDED.column_5, column_2  = EXCLUDED.column_2, column_8  = EXCLUDED.column_8, column_7  = EXCLUDED.column_7"
+PL/pgSQL function inline_code_block line 4 at SQL statement
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:310)
+        at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:296)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:273)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:268)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveDataFromGtt(AbstractMultiPGWriter.java:147)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveAndCommitToPG(AbstractMultiPGWriter.java:296)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter$MoveAndCommitCallable.call(AbstractMultiPGWriter.java:415)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:321)
+        ... 4 more</con:responseContent><con:header><con:name>kod</con:name><con:value>zadanie_2</con:value></con:header></con:response><con:response name="Odpowiedź-BRAK" id="d134fed2-ce42-4300-a33b-6c2fe41c3654" httpResponseStatus="400" mediaType="application/xml"><con:settings/><con:responseContent>user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE</con:responseContent></con:response></con:restMockAction></con:restMockService><con:properties><con:property><con:name>BaseURL</con:name><con:value>http://localhost:8089/</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

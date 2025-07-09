@@ -1,0 +1,7 @@
+# SoapUI output & IDE junk
+reports/
+*.log
+*.tmp
+.idea/
+*.iml
+.DS_Store
