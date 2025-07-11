@@ -2,6 +2,10 @@
 
 Wszystkie znaczące zmiany w tym projekcie będą dokumentowane w tym pliku.
 
+## [1.2] - 2025-07-11
+### Dodano
+- Dodanie `LICENSE.txt` z licencją do wykorzystania nie komercyjnego bez dalszego modyfikowania i rozpowszechniania.
+
 ## [1.1] - 2025-07-11
 ### Poprawki
 - Modyfikacja `README.md`

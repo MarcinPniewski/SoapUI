@@ -45,3 +45,9 @@ cd scripts
 - uruchomić MocService `Zaślepka aplikacji testowej`
 - uruchomić TestCase `statusZadania` podając nazwę zadania w wyskakującym okienku
 - przejrzeć logi w konsoli "script log"
+
+## Licencja
+
+To repozytorium udostępniane jest wyłącznie do celów testowych i edukacyjnych.  
+Wszelkie inne formy użycia (modyfikacja, komercja, publikacja) są zabronione.  
+Szczegóły w pliku [LICENSE.txt](./LICENSE.txt).
