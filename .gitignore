@@ -1,5 +1,4 @@
 # SoapUI output & IDE junk
-reports/
 *.log
 *.tmp
 .idea/
