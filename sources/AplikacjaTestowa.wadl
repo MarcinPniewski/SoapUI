@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://wadl.dev.java.net/2009/02">
+  <doc xml:lang="en" title="Aplikacja testowa"/>
+  <resources base="${#Projekt#mp.http.address.9999}">
+    <resource path="statusZadania" id="statusZadania">
+      <doc xml:lang="en" title="statusZadania"/>
+      <param name="kod" default="zadanie_1" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <method name="GET" id="Method statusZadania">
+        <doc xml:lang="en" title="Metoda statusZadania"/>
+        <request/>
+        <response status="200">
+          <representation mediaType=""/>
+          <representation mediaType="text/plain;charset=UTF-8"/>
+        </response>
+        <response status="400 404 500">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+  </resources>
+</application>

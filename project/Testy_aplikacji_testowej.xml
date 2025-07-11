@@ -144,7 +144,7 @@ else if (kodZTestCase) {
 else {
     log.info "Brak kodu z CLI – uruchamiam GUI prompt"
     def kodZadania = UISupport.prompt(
-        "Podaj kod zadania (np. zadanie_1 lub zadanie_2):",
+        "Podaj kod zadania (np. zadanie_1, zadanie_2 lub zadanie_3):",
         "Wprowadź kod zadania",
         "zadanie_1"
     )
