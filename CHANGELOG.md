@@ -1,4 +1,4 @@
-# Changelog
+# Changelog SoapUI
 
 Wszystkie znaczące zmiany w tym projekcie będą dokumentowane w tym pliku.
 

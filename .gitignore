@@ -1,6 +1,5 @@
-# SoapUI output & IDE junk
+.idea/
 *.log
 *.tmp
-.idea/
-*.iml
+*.bak
 .DS_Store
