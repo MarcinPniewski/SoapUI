@@ -2,6 +2,11 @@
 
 Wszystkie znaczące zmiany w tym projekcie będą dokumentowane w tym pliku.
 
+## [1.3] - 2025-07-29
+### Poprawki
+- Modyfikacja `README.md`
+- Modyfikacja nazw asercji
+
 ## [1.2] - 2025-07-11
 ### Dodano
 - Dodanie `LICENSE.txt` z licencją do wykorzystania nie komercyjnego bez dalszego modyfikowania i rozpowszechniania.
