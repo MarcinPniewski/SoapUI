@@ -15,7 +15,7 @@ W przypadku uruchomienia testu z linii komend logi z przebiegu zostają umieszcz
 
 ## Struktura projektu
 - `project/` – pliki projektów SoapUI (.xml)
- - `Testy_aplikacji_testowej.xml`
+  - `Testy_aplikacji_testowej.xml`
 - `reports/` - raporty z wykonanych testów CLI
 - `scripts/` – skrypty CLI do uruchamiania testów z lini komend
 - `sources/` - pliki źródłowe wykorzystane w projekcie SoapUI
