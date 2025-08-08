@@ -1,0 +1,39 @@
+================================
+=
+= SOAPUI_HOME = /Applications/SoapUI-5.8.0.app/Contents/java/app
+=
+================================
+SoapUI 5.8.0 TestCase Runner
+16:34:42,411 INFO  [DefaultSoapUICore] initialized soapui-settings from [/Users/marcin/soapui-settings.xml]
+16:34:43,006 INFO  [PluginManager] Adding plugin from [/Users/marcin/.soapuios/plugins/ready-mqtt-plugin-dist.jar]
+16:34:43,006 INFO  [PluginManager] Adding plugin from [/Users/marcin/.soapuios/plugins/readyapi-postman-1.0.1.jar]
+16:34:43,744 INFO  [PluginManager] Adding plugin from [/Users/marcin/.soapuios/plugins/ready-uxm-plugin-os-1.0.3.jar]
+16:34:44,120 INFO  [PluginManager] 3 plugins loaded in 1113 ms
+16:34:44,120 INFO  [DefaultSoapUICore] All plugins loaded
+16:34:44,876 INFO  [WsdlProject] Loaded project from [file:/Users/marcin/Documents/Praca/GIT/SoapUI/scripts/../project/Testy_aplikacji_testowej.xml]
+16:34:44,882 INFO  [SoapUITestCaseRunner] Running SoapUI tests in project [Testy aplikacji testowej]
+16:34:44,883 INFO  [SoapUITestCaseRunner] Running TestCase [statusZadania]
+16:34:45,410 INFO  [log] Tryb CLI – przekazano kod zadania: 'zadanie_1'
+16:34:45,432 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [statusZadania]
+16:34:45,443 INFO  [SoapUITestCaseRunner] running step [Odpowiedź]
+16:34:46,272 INFO  [log]     Nie wystąpił błąd 'FAILED' dla zadania zadanie_1
+16:34:46,274 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+16:34:46,275 INFO  [SoapUITestCaseRunner] Assertion [Pierwsza linia] has status VALID
+16:34:46,275 INFO  [SoapUITestCaseRunner] Assertion [Naglowek] has status VALID
+16:34:46,275 INFO  [SoapUITestCaseRunner] Assertion [Kod zadania] has status VALID
+16:34:46,275 INFO  [SoapUITestCaseRunner] Assertion [Podsumowanie] has status VALID
+16:34:46,275 INFO  [SoapUITestCaseRunner] Assertion [Brak "FILED"] has status VALID
+16:34:46,276 INFO  [SoapUITestCaseRunner] Assertion [Brak "Failures"] has status VALID
+16:34:46,276 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status VALID
+16:34:46,293 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [statusZadania], time taken: 420ms, status: FINISHED
+16:34:46,297 INFO  [SoapUITestCaseRunner] TestCase [statusZadania] finished with status [FINISHED] in 420ms
+
+SoapUI 5.8.0 TestCaseRunner Summary
+-----------------------------
+Time Taken: 1414ms
+Total TestSuites: 0
+Total TestCases: 1 (0 failed)
+Total TestSteps: 1
+Total Request Assertions: 8
+Total Failed Assertions: 0
+Total Exported Results: 0
