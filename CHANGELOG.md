@@ -2,10 +2,15 @@
 
 Wszystkie znaczące zmiany w tym projekcie będą dokumentowane w tym pliku.
 
+## [1.5] - 2025-08-13
+### Dodano
+- Dodanie skryptu do uruchamiania testów CLI na Dockerze
+- Dodanie `.github/workflows/release.yml` celem automatycznego tworzenia release po utworzeniu taga
+
 ## [1.4] - 2025-08-08
 ### Poprawki
 - Modyfikacja skryptów do uruchamiania testów CLI by zapanować nad logami SoapUI
-- modyfikacja `.gitignore`
+- Modyfikacja `.gitignore`
 
 ## [1.3] - 2025-07-29
 ### Poprawki
