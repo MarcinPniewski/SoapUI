@@ -27,22 +27,35 @@ W przypadku uruchomienia testu z linii komend logi z przebiegu zostają umieszcz
 - w skryptach uruchamiających dostosować zmienną `SOAPUI_HOME` zawierającą ścieżkę do SoapUI
 
 ## Uruchamianie testów CLI
+
 ### (MacOS/Linux)
 ```bash
 cd scripts
 ./testy_aplikacji_testowej_uruchom_z_bash.sh zadanie_1
 ./testy_aplikacji_testowej_uruchom_z_bash.sh zadanie_2
 ./testy_aplikacji_testowej_uruchom_z_bash.sh zadanie_3
+./testy_aplikacji_testowej_uruchom_z_bash.sh zadanie_4
 ```
 Wynik testów pojawi się w terminalu oraz w raportach w katalogu `reports`.
+
 ### (Windows)
 ```powershell
 cd scripts
 .\testy_aplikacji_testowej_uruchom_z_powershell.ps1 zadanie_1
 .\testy_aplikacji_testowej_uruchom_z_powershell.ps1 zadanie_2
 .\testy_aplikacji_testowej_uruchom_z_powershell.ps1 zadanie_3
+.\testy_aplikacji_testowej_uruchom_z_powershell.ps1 zadanie_4
 ```
 Wynik testów pojawi się w terminalu oraz w raportach w katalogu `reports`.
+
+### (Docker)
+```bash
+/opt/tests/SoapUI/scripts/testy_aplikacji_testowej_uruchom_z_docker.sh zadanie_1
+/opt/tests/SoapUI/scripts/testy_aplikacji_testowej_uruchom_z_docker.sh zadanie_2
+/opt/tests/SoapUI/scripts/testy_aplikacji_testowej_uruchom_z_docker.sh zadanie_3
+/opt/tests/SoapUI/scripts/testy_aplikacji_testowej_uruchom_z_docker.sh zadanie_4
+```
+Wynik testów pojawi się w terminalu oraz w raportach w katalogu `/opt/reports`.
 
 ## Uruchamianie testów GUI
 - zaimportować projekt z pliku .xml do SoapUI
