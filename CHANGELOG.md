@@ -2,6 +2,10 @@
 
 Wszystkie znaczące zmiany w tym projekcie będą dokumentowane w tym pliku.
 
+## [1.6] - 2025-08-18
+### Poprawki
+- Zmiana skryptu do uruchamiania testów CLI na Dockerze by wykorzystywał xunit-viewer
+
 ## [1.5] - 2025-08-13
 ### Dodano
 - Dodanie skryptu do uruchamiania testów CLI na Dockerze

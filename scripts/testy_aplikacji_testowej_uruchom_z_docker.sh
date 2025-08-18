@@ -30,8 +30,8 @@ echo ">>> Start testów z kodem: $KOD_ZADANIA"
    "$PROJECT_FILE" | tee "$LOG_FILE"
 
 # === Konwersja raportów XML do HTML ===
-if command -v junit-viewer >/dev/null 2>&1; then
-   junit-viewer --results="$REPORT_DIR" --save="$HTML_REPORT"
+if command -v xunit-viewer >/dev/null 2>&1; then
+   xunit-viewer -n --results="$REPORT_DIR" --output="$HTML_REPORT"
    echo ">>> Wygenerowano raport HTML: $HTML_REPORT"
    
    # === Usunięcie plików XML z raportem (TEST-*.xml) ===
@@ -40,7 +40,7 @@ if command -v junit-viewer >/dev/null 2>&1; then
       echo ">>> Usunięto $XML_FILES_DELETED plik(ów) JUnit XML z raportem"
    fi
 else
-   echo ">>> Nie znaleziono 'junit-viewer' – pominięto konwersję HTML"
+   echo ">>> Nie znaleziono 'xunit-viewer' – pominięto konwersję HTML"
 fi
 
 # === Usunięcie logów FAILED (Aplikacja_testowa-statusZadania-Odpowiedź-*-FAILED.txt) ===
