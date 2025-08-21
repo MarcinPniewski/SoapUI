@@ -14,6 +14,8 @@ Dla zadania_2 symulującego błędną odpowiedź z aplikacji testowej wyświetla
 W przypadku uruchomienia testu z linii komend logi z przebiegu zostają umieszczone w katalogu `reports`.
 
 ## Struktura projektu
+- `.github/workflows/` - workflow tworzący Release na podstawie CHANGELOG
+  - `release.yml`
 - `project/` – pliki projektów SoapUI (.xml)
   - `Testy_aplikacji_testowej.xml`
 - `reports/` - raporty z wykonanych testów CLI
